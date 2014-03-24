@@ -112,6 +112,7 @@ Add routes via Express
 * Better AngularJS performance
 * Add EmberJS 
 * Localization
+* Need anchor directive
 * Publishing and versioning
 * Secure edit mode through Passport
 * Smarter directives to allow for attribute passthrough
