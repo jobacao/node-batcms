@@ -13,7 +13,7 @@ BatCMS hooks a MongoDB based CMS onto existing AngularJS WebApps. BatCMS modules
 
 ## Getting Started
 1. bower install
-1. npm install
+1. npm install (If NodeCanvas breaks the solution is probably found in [NodeCanvas Install Docs](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX))
 1. gulp (should bring up http://localhost:3000) in your browser
 
 ## Add BatCMS to your App
