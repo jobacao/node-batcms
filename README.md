@@ -8,8 +8,16 @@ __License:__ [MIT](http://www.opensource.org/licenses/mit-license.php)
 __Dependencies:__ MongoDB, NodeJS, AngularJS, Bower, Gulp, CamanJS, cairo, libjpeg, libpng, giflib. Since CamanJS uses NodeCanvas refer to [NodeCanvas Install Docs](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX) on how to install CamanJS, cairo, libjpeg, libpng, giflib.
 
 ## About
-BatCMS hooks a MongoDB based CMS onto existing AngularJS WebApps. BatCMS modules automatically retrieves and updates MongoDB via directives. New CMS properties are defined via HTML. In context editor for CMS properties.
- 
+BatCMS hooks a MongoDB based CMS onto existing AngularJS WebApps. BatCMS modules automatically retrieves and updates MongoDB via directives. 
+
+__Features:__
+* Add CMS to your existing WebApp via directives
+* Point and click in-context editor for content owners
+* Read only mode for public users
+* Create new CMS properties by updating HTML only
+* Image upload and resize capabilities
+
+
 
 ## Getting Started
 1. bower install
