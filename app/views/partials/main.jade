@@ -1,0 +1,41 @@
+div(ng-include='\'partials/navbar\'')
+
+h4 Text
+div(cms-model="home in home")
+  span(cms-prop="home.welcome")
+
+hr
+h4 TextArea
+div(cms-model="home in home")
+  h5(cms-prop="home.title")
+  div(cms-prop="home.info" textarea)
+
+hr
+h4 Button
+
+div(cms-model="button in buttons")
+  a.btn.btn-lg.btn-success(ng-href='#')
+    span(cms-prop="button.start")
+
+h4 Image
+span(cms-model="logo in home.photos.logoz" photo)
+  span(cms-photo="logo" show-dim="103x89" dim1="103x89" alt="Logo")
+
+hr
+
+h4 Repeating Content
+div(cms-repeat='content in home.repeat')
+  h4(cms-prop="content.name")
+  p(cms-prop="content.info")
+
+hr
+
+h4 Repeating Images
+.row
+  div.col-md-3(cms-repeat='pic in home.repeating-images' photo)
+    span(cms-photo="pic" show-dim="103x89" dim1="103x89")
+    h4(cms-prop="pic.info")
+hr
+div(ng-switch='editable')
+  a(ng-href="/read" ng-switch-when="true") Read Only Version
+  a(ng-href="/" ng-switch-when="false") Writable Version

@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+public
+.tmp
+data
+.sass-cache
+app/bower_components
+tmp
+heroku
+/views
+dist

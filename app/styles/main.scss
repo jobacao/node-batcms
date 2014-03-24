@@ -1,0 +1,290 @@
+$icon-font-path: "/bower_components/bootstrap-sass/fonts/";
+
+@import 'bootstrap-sass/lib/bootstrap';
+@import "compass/css3";
+// @import "compass/css3/appearance";
+
+// Sizing
+$g-ratio: 1.618;
+$md-size: 14;
+$sm-size: $md-size/$g-ratio;
+$xs-size: $sm-size/$g-ratio;
+$xxs-size: $xs-size/$g-ratio;
+
+$lg-size: $md-size*$g-ratio;
+$xlg-size: $lg-size*$g-ratio;
+$xxlg-size: $xlg-size*$g-ratio;
+$xxxlg-size: $xxlg-size*$g-ratio;
+
+// Colors
+$white: #fff;
+$gray: #999999;
+$green: #32C1A3;
+$red: #e03d51;
+$yellow: #faf163;
+$blue: #428bca;
+
+.block-on{
+    display: block !important;
+}
+
+
+input[type=password],
+input[type=password]:hover,
+input[type=password]:focus,
+input[type=password]:active,
+input[type=text],
+input[type=text]:hover,
+input[type=text]:focus,
+input[type=text]:active,
+input[type=submit],
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=submit]:active,
+select,
+button:hover,
+button:focus,
+button:active,
+button,
+button:hover,
+button:focus,
+button:active,
+textarea:hover,
+textarea:focus,
+textarea:active,
+textarea{
+  outline: 0px !important;
+  @include appearance(none);
+}
+  // outline 0px !important
+  // -webkit-appearance none
+
+button{
+  background-color: $green;
+  border: 1px solid darken($green,4%);
+  color: $white;
+  // text-shadow 0px 1px 1px rgba(0, 0, 0, 0.3)
+  // width 100%
+  // display inline-block
+  // margin-bottom 0
+  // line-height 1.50
+  // height ($input-height)px
+  padding: $xs-size+px $md-size+px;
+  font-size: $md-size+px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  // border: 1px solid transparent;
+  white-space: nowrap;
+  @include border-radius(4px);
+  @include user-select(none);
+  // &:disabled
+  //   background-color $base-color-disabled-green
+  //   border-color $base-color-disabled-green
+  //   &:hover,
+  //   &:focus,
+  //   &:active
+  //     background-color $base-color-disabled-green
+  //     border-color $base-color-disabled-green
+  //     color #fff
+  &:hover,
+  &:focus,
+  &:active{
+    background-color: darken($green,4%);
+    border-color: darken($green,4%);
+    color: $white
+  }
+}
+
+a{
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active{
+        text-decoration: none;
+    }
+}
+label{
+    margin: 0;
+}
+.button-remove{
+    color: $red;
+    &:hover,
+    &:focus,
+    &:active{
+        color: $red;
+    }
+}
+.button-add,.button-remove{
+   // color
+    font-size: $lg-size+px;
+}
+// upload
+// .content-photo-upload{
+//     width: 50px;
+//     height: 20px;
+// }
+// [auto-upload]{
+//     width: 0 !important;
+//     height: 0 !important;
+
+// }
+[auto-upload]{
+    // need to hide this since it was causing spacing issues.
+    label{
+        display: none !important;
+    }
+    input{
+        // width: 0 !important;
+        display: none !important;
+        // height: 0 !important;
+    }
+}
+// cms
+.cms-photo-empty{
+    color: lighten($gray, 20%);
+    font-size: $xlg-size+px !important;
+    &:hover{
+        color: lighten($gray, 10%);
+    }
+}
+
+.cms-empty{
+    color: $gray;
+}
+.cms-repeat-contain{
+    position: relative;
+}
+.cms-remove{
+    position: relative;
+}
+.cms-remove-cover{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: -34px;
+    padding: 5px;
+    // background-color: darken($white,20%);
+    background-color: rgba(#ffffff, 0.80 );
+}
+.cms-repeat-cover{
+    position: absolute;
+    top: -35px;
+    display: none;
+    left: 0;
+    padding: 5px;
+    background-color: rgba(#ffffff, 0.80 );
+    // background-color: rgba($gray, 0.10 );
+
+    // background-color: darken($white,20%);
+}
+.cms-over{
+    background-color: #fff;
+    @include opacity(0.50);
+    @include box-shadow(inset 0 0 0 2px lighten($gray,20%));
+}
+input.cms-edit, textarea.cms-edit{
+    @include box-shadow(inset 0 0 0 2px lighten($gray,20%));
+    border: 0px solid transparent;
+    line-height: normal !important;
+    padding: 0;
+    margin: 0;
+    &:focus,
+    &:active{
+        @include box-shadow(inset 0 0 0 2px $blue);
+    }
+
+}
+.cms-edit{
+    width: 100%;
+}
+
+////////////////////////////////////////
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}

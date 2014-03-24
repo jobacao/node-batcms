@@ -1,0 +1,22 @@
+'use strict';
+angular.module('batcmsApp')
+  .factory('User', function ($resource) {
+    return $resource('/api/users/:id', {
+      id: '@id'
+    }, { //parameters default
+      update: {
+        method: 'PUT',
+        params: {}
+      },
+      get: {
+        method: 'GET',
+        params: {
+          id:'me'
+        }
+      }
+    });
+  });
+module.exports = function(){
+
+ 
+};
