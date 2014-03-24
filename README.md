@@ -1,4 +1,4 @@
-BatCMS
+BatCMS - Simple CMS for WebApps
 ======
 
 __Contributors:__  [John Cao](https://twitter.com/jobacao)
