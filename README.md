@@ -103,6 +103,7 @@ Add routes via Express
 ## Planned enhancements
 * Better AngularJS performance
 * Add EmberJS 
+* Localization
 * Publishing and versioning
 * Secure edit mode through Passport
 * Smarter directives to allow for attribute passthrough
