@@ -112,7 +112,8 @@ gulp.task('connect', function(){
 });
 gulp.task('server', function(){
   startLivereload();
-  return $.nodemon({ script:'server.js', watch: 'lib', ext:'js', ignore: []  });
+  return $.nodemon({ script:'server.js', watch: 'lib', ext:'js', ignore: [],  nodeArgs: ['--debug'] });
+
 });
 // watch for changes and notify live reload
 gulp.task('watch', ["connect"], function(){
